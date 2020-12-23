@@ -28,6 +28,7 @@ int main()
 		pop();
 		cout << popnumber<<" ";
 	}
+	system("pause");
 }
 //入栈函数的实现方法
 void push(int x)
