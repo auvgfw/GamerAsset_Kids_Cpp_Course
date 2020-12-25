@@ -1,45 +1,53 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <cmath>
 using namespace std;
 //判断是否存在重复数字
-bool IdenticalJudge(int x);
-
+bool IdenticalandZeroJudge(int x);
+int n;
 int main()
 {
-    int n;
-    int min,max;
-    cin>>n;
-    max=ceil(pow(10,n))-1;
-    min=ceil(pow(10,n-1));
-    for(int i=min;i<=max;i++)
+
+    int min, max;
+    cin >> n;
+    int i;
+    max = ceil(pow(10, n)) - 1;
+    min = ceil(pow(10, n - 1));
+    for (i = min; i <= max; i++)
     {
-        if(IdenticalJudge(i))
+        if (IdenticalandZeroJudge(i))
         {
-            cout<<i<<endl;
+            for (int j = n - 1; j >= 0; j--)
+            {
+                cout << "    " << (int)(i / pow(10, j)) % 10;
+            }
+            cout << endl;
         }
     }
     system("pause");
-
 }
 
-bool IdenticalJudge(int x)
+bool IdenticalandZeroJudge(int x)
 {
-    bool bs[10]={0};
-    do 
+    bool bs[10] = {0};
+    do
     {
-        int n=x%10;
-        if ( bs[n] ==1 ) 
+        int number = x % 10;
+        if (number == 0 || number > n)
         {
             return false;
-            break; 
+            break;
         }
-        bs[n] = 1;
-        x/=10;
-    
-    } 
+        if (bs[number] == 1)
+        {
+            return false;
+            break;
+        }
+        bs[number] = 1;
+        x /= 10;
+    }
 
     while (x);
-    if ( 0==x ) 
+    if (0 == x)
     {
         return true;
     }
@@ -47,5 +55,4 @@ bool IdenticalJudge(int x)
     {
         return false;
     }
-    
 }
