@@ -1,0 +1,31 @@
+<mxfile host="65bd71144e" modified="2021-01-01T05:45:36.610Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" version="13.10.0" etag="01KZVh0KR52eoHNJrdTT" type="embed">
+    <diagram id="87FTI5FK-Y4f2fHZfDxS" name="Page-1">
+        <mxGraphModel dx="311" dy="173" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="不能被4整除" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="210" width="70" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="210" width="60" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="能被4整除" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="210" width="20" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="能被400整除" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="210" width="40" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="不能被400整除" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="260" width="40" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=none;html=1;exitX=1.103;exitY=0.358;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.01;entryY=0.362;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5" target="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="190" y="330" as="sourcePoint"/>
+                        <mxPoint x="240" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
