@@ -10,7 +10,7 @@ using namespace std;
 
 long long top,a[100050],n,s;
 
-bool prime(int x)
+bool prime(int x)//判断素数
 {
      if(x<2) return 0;
      if(x==2) return 1;
