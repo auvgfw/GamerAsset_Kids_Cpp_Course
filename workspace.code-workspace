@@ -6,7 +6,9 @@
 	],
 	"settings": {
 		"files.associations": {
-			"cmath": "cpp"
+			"cmath": "cpp",
+			"iostream": "cpp",
+			"ostream": "cpp"
 		}
 	}
 }
