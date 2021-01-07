@@ -1,4 +1,4 @@
-#include <iostream> //P1706
+#include <iostream> 
 #include <cstdio>
 #include <cstring>
 #include <string>
