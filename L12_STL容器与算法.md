@@ -89,3 +89,83 @@ int main()
     cout<<st.empty();
 }
 ```
+
+## 队列Queue
+
+**取扑克牌**
+
+题目描述：
+
+一副从1到n的牌，每次从牌堆顶取一张放桌子上，再取一张放牌堆底，直到手里没牌，设计程序，输入n，输出桌子上的牌堆的顺序数组。
+
+输入N，例如N=4，则手上的牌为1，2，3，4；桌上的牌为1，3，2，4。
+
+
+
+解题思路：
+
+使用一个队列表示这堆牌，模拟取牌过程。
+
+```cpp
+#include<iostream>
+#include<queue>
+using namespace std;
+queue<int> poker;
+int N,x;
+int main()
+{
+    cin>>N;
+    for(int i=0;i<N;i++)
+    {
+        cin>>x;
+        poker.push(x);
+    }
+    for(int i=1;!poker.empty();i++)
+    {
+        if(i%2==1)
+        {
+            cout<<poker.front()<<" ";//front()方法获取队首元素的值,奇数次，把牌直接翻开
+        }
+        else
+        {
+            x=poker.front();//偶数次，把牌放后面
+            poker.push(x);
+        }
+        poker.pop();//无论翻开还是放后面，都删除第一张牌。
+    }
+    system("pause");
+    return 0;
+}
+```
+## 集合SET
+
+集合能够调用的方法有insert,find等。集合没有顺序，加入到集合中的元素，自动升序排列。且集合中不能有重复的元素，加入到集合中的元素，如果是重复的，则自动忽略。
+
+```cpp
+#include<string>
+#include<set>
+#include<iostream>
+int main()
+{
+
+    string name = "Includehelp";
+
+    // Method 1, by passing string into the set constructor;
+    set <char> set_name(begin(name), end(name));//将string转为set
+
+    cout << "Converted by passing string into constructor" << endl;
+
+    // Range-based for loop OR For-each loop
+    for (auto i : set_name)//遍历各种容器的方法之一，可以遍历string，vector，set
+        cout << i << " ";
+    cout << endl;
+}
+```
+
+输出结果将自动去掉原string中所有重复的字母，并按照ascii顺序牌列。
+
+
+    Converted by passing string into constructor
+    I c d e h l n p u
+
+
