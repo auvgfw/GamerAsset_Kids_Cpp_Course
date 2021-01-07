@@ -1,52 +1,37 @@
-#include<iostream>
-#include<stack>
-using namespace std;
-int main()
-{
-    char t;
-    stack<int> s;
-    while(cin>>t&&t!='@')
-    {
-        if(t>='0'&&t<='9')
-        {
-            int temp=t-'0';
-            while(cin>>t&&t>='0'&&t<='9')
-                temp=temp*10+t-'0';
-            s.push(temp);
+ #include<iostream>
+    #include<cstdio>
+    using namespace std;
+    long long stk[1000];
+    int main(){
+    long long i=0,now=0;
+    char op;
+    while((op=getchar())!='@'){
+        if(op>='0'&&op<='9') now*=10,now+=op-'0';
+        else if(op=='.'){
+            stk[++i]=now;
+            now=0;
         }
-        if(t=='+')
-        {
-            int a=s.top();
-            s.pop();
-            int b=s.top();
-            s.pop();
-            s.push(b+a);
+        else if(op=='+'){
+            stk[i-1]=stk[i-1]+stk[i];
+            stk[i]=0;
+            i--;
         }
-        if(t=='-')
-        {
-            int a=s.top();
-            s.pop();
-            int b=s.top();
-            s.pop();
-            s.push(b-a);
+        else if(op=='-'){
+            stk[i-1]=stk[i-1]-stk[i];
+            stk[i]=0;
+            i--;
         }
-        if(t=='/')
-        {
-            int a=s.top();
-            s.pop();
-            int b=s.top();
-            s.pop();
-            s.push(b/a);
+        else if(op=='*'){
+            stk[i-1]=stk[i-1]*stk[i];
+            stk[i]=0;
+            i--;
         }
-        if(t=='*')
-        {
-            int a=s.top();
-            s.pop();
-            int b=s.top();
-            s.pop();
-            s.push(b*a);
+        else if(op=='/'){
+            stk[i-1]=stk[i-1]/stk[i];
+            stk[i]=0;
+            i--;
         }
     }
-    cout<<s.top()<<endl;
+    cout<<stk[1];
     return 0;
-} 
+}
