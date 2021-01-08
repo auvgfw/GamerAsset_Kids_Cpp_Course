@@ -267,3 +267,191 @@ STL提供了一系列的，在通常情况下实现了最优化的算法。
 竞赛常用算法一般在algorithm头文件中。
 
 
+### sort
+
+用于排序的sort函数采用了快速排序算法来实现，时间复杂度是nlogn。
+普通的sort用法如下
+
+```cpp
+#include<algorithm>
+using namespace std;
+int main()
+{
+  int a[4]={1,5,3,4};
+  vector<int> b(a);//把数组a里面的所有的数字赋值给向量b
+  sort(a,a+4);//数组sort，从头到尾。我们可以将4理解成一共给4个数排序。实际上是给位于[0，4）区间内的下标排序
+  sort(b.begin(),b.end());//向量sort，从头到尾
+  for(int i=0;i<4;i++)
+    cout<<a[i]<<" ";//输出为 1 3 4 5
+    cout<<b[i]<<" ";
+}
+```
+我们也可以自定义排序规则
+下面的程序根据数字中7的数量排序
+
+```cpp
+#include<iostream>
+#include<algorithm>
+bool cmp_count7(int a,int b)
+{
+    int SevenInA=0;
+    int SevenInB=0;
+    int r;
+    while(a!=0)
+    {
+        r=a%10;
+        if(r==7)
+        {
+            SevenInA++;
+        }
+        a/=10;
+    }
+
+    while(a!=0)
+    {
+        r=b%10;
+        if(r==7)
+        {
+            SevenInB++;
+        }
+        b/=10;
+    }
+    return SevenInA>SevenInB;
+}
+int main()
+{
+    int count7array[]={34567,2775,7773,986543,7777};
+    size_t size = sizeof(array) / sizeof(array[0]); 
+    sort(count7array,count7array+size)；
+}
+```
+
+### fill
+fill与memset的作用类似。
+
+```cpp
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+  int a[4]={1,2,3,4};
+  fill(a,a+4,1);
+  for(int i=0;i<4;i++)
+    cout<<a[i]<<" "; //输出为 1 1 1 1
+}
+```
+
+### min,max,minmax
+
+```cpp
+// minmax example
+#include <iostream>     // std::cout
+#include <algorithm>    // std::minmax
+
+int main () {
+  auto result = std::minmax({1,2,3,4,5});
+
+  std::cout << "minmax({1,2,3,4,5}): ";
+  std::cout << result.first << ' ' << result.second << '\n';
+  return 0;
+}
+```
+
+```cpp
+#include<stdio.h>
+#include<algorithm>
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+	int x =1, y =-2;
+	cout <<max(x,y)<< " "<< min(x,y)<<endl;
+    return 0;
+} 
+```
+
+
+### swap
+swap(x,y)用来交换x和y的值
+
+```cpp
+#include<iostream> 
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int x=1, y=2, z;
+	swap(x, y);
+	cout<< x << " "<< y<<endl;
+	swap(x, z); 
+	cout<<x<< z <<endl;
+	swap(y, z); 
+	cout<<y<< z <<endl; 
+	return 0;
+}
+```
+### reverse
+reverse(it, it2)可以将数组指针在[it, it2)之间的元素或容器的迭代器在[it, it2)范围内的元素。
+
+可以对整形数组进行反转。
+
+ ```cpp
+#include<algorithm>
+#include<iostream>
+using namespace std; 
+int main()
+{
+	int a[10]= {10, 11, 12, 13, 14, 15}; 
+	reverse(a, a+4);//a[0]~a[3]反转
+	for(int i=0; i<6; i++){
+		cout<<a[i]<<" ";
+	} 
+	return 0;
+}
+```
+
+也可以对字符串进行反转
+
+```cpp
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	string str = "abcdefghi";
+	reverse(str.begin()+2, str.begin()+6);//对a[2]~a[5]逆转*左闭右开* 
+	for( int i=0; i < str.length(); i++){
+		cout<<str[i]<<" ";
+	} 	
+	return 0;
+}
+```
+### next_permutation
+next_permutation将一个数组或向量变为下一个字典序列，当变换完毕后返回false
+
+```cpp
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int a[10] = {3, 2, 1};
+	do{
+		cout<<a[0]<< " "<<a[1]<<" "<<a[2]<<endl;	
+	}while(next_permutation(a, a+3)); 	
+	return 0;
+}
+```
+
+## cmath中的计算工具
+
+cmath提供了一系列的数学工具，例如sqrt，pow，abs，取整，三角函数等都在里面。
+
+[cmath参考](http://www.cplusplus.com/reference/cmath/?kw=cmath)
+
+## 范例
+
