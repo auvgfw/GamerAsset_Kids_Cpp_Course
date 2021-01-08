@@ -11,7 +11,8 @@
 			"ostream": "cpp",
 			"iosfwd": "cpp",
 			"xstring": "cpp",
-			"stack": "cpp"
+			"stack": "cpp",
+			"algorithm": "cpp"
 		}
 	}
 }
