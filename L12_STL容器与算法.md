@@ -19,6 +19,10 @@ C++ 对模板（Template）支持得很好，STL 就是借助模板把常用的�
 
 https://www.cplusplus.com/reference/
 
+**算法可视化**
+
+https://visualgo.net/zh
+
 ## 容器
 
 容器可以看作是数组的扩展，STL提供了向量vector（即顺序表），栈stack，队列queue，优先队列priority_queue,链表list，集合set，映射map等容器。
@@ -455,3 +459,6 @@ cmath提供了一系列的数学工具，例如sqrt，pow，abs，取整，三�
 
 ## 范例
 
+[P1104 生日](https://www.luogu.com.cn/problem/P1104)
+
+[P1090 合并果子](https://www.luogu.com.cn/problem/P1090)
