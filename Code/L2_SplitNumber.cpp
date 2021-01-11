@@ -32,5 +32,8 @@ int main()
         a=n%10;
         cout<<a;
         n=n/10;
+
+
     }
+    system("pause");
 }
