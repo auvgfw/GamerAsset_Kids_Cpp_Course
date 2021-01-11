@@ -11,3 +11,7 @@ GPLV3协议摘要如下：
 我们希望构建良好的信息技术学习环境，身为信息技术教师，作为信息技术的先驱者，传播者，希望大家不要靠信息差，从学生、从家长那里收“智商税”，而是真正的提升信息技术的教学水平，推动中国公民信息综合素养的提升，让被流氓软件霸占的电脑少一些，让被信息流垄断导致的“[魏则西事件](https://baike.sogou.com/v143493707.htm)”少发生一些，让学生们学会获取信息、筛选信息、抵制不良信息，打破信息垄断，净化网络环境，让知识在互联网上自由流通，把学习的权利还给每一个中国孩子。
 
 如果要联系我，请提交issue。
+
+更多教程，请关注公众号
+
+![gamerasset](https://github.com/auvgfw/GamerAsset_Kids_Cpp_Course_/blob/master/LessonPlan/images/qrcode_for_gamerasset.jpg?raw=true)
