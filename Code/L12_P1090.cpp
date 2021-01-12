@@ -1,7 +1,16 @@
-#include<bits/stdc++.h>
+#include<iostream>//P1090
+#include<cstdio>
+#include<cstring>
+#include<string>
+#include<iomanip>
+#include <algorithm>
+#include<cmath>
+#include<vector>
+#include<set>
+#include<queue>
 using namespace std;
 int n,x,ans;
-priority_queue<int,vector<int>,greater<int> >q;
+priority_queue<int,vector<int>,greater<int> > q;
 int main(){
 	cin>>n;
 	for(int i=1;i<=n;i++) cin>>x,q.push(x);

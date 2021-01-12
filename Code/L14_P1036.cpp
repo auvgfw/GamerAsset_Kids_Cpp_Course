@@ -3,10 +3,10 @@
 #include<iomanip>
 #include<vector>
 #include<cmath>
-int sel[30];//x[i]=0,选择第i+1位，x[i]=1,不选择第i+1位。一开始全为0，都选择
+int sel[30];//sel[i]=0,选择第i+1位，x[i]=1,不选择第i+1位。一开始全为0，都选择
 int x[30];
-using namespace std;
 
+using namespace std;
 
 bool isprime(int n){//判断是否质数
     int s=sqrt(double(n));
@@ -15,6 +15,7 @@ bool isprime(int n){//判断是否质数
     }
     return true;
 }
+
 
 int main(){
     int n,k;

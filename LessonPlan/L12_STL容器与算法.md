@@ -42,6 +42,7 @@ Vector相当于数组。
 
 ```cpp
 vector<int> a;//定义用来存储int数据的向量a，注意其他容器的定义方法类似
+
 vector<int> b(20);定义向量b，让其里面有20个空元素。
 ```
 ### 插入
@@ -308,10 +309,10 @@ bool cmp_count7(int a,int b)
         {
             SevenInA++;
         }
-        a/=10;
+        a/=10;b
     }
 
-    while(a!=0)
+    while(b!=0)
     {
         r=b%10;
         if(r==7)

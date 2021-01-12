@@ -12,7 +12,8 @@
 			"iosfwd": "cpp",
 			"xstring": "cpp",
 			"stack": "cpp",
-			"algorithm": "cpp"
+			"algorithm": "cpp",
+			"queue": "cpp"
 		}
 	}
 }

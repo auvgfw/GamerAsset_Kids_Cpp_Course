@@ -11,6 +11,7 @@ using namespace std;
 #define MAX_N 100000
 #define MAX_M 5000000
 vector<int> vects[MAX_N];
+vector<int> a[100];
 set<int> city;
 
 int main()
@@ -22,8 +23,8 @@ int main()
     for (i = 0; i < m; i++)
     {
         cin >> a >> b;
-        city.insert(a);
-        city.insert(b);
+         city.insert(a);
+         city.insert(b);
         vects[a].push_back(b);
         vects[b].push_back(a);
     }
