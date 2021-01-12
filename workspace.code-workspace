@@ -13,7 +13,9 @@
 			"xstring": "cpp",
 			"stack": "cpp",
 			"algorithm": "cpp",
-			"queue": "cpp"
+			"queue": "cpp",
+			"bitset": "cpp",
+			"vector": "cpp"
 		}
 	}
 }

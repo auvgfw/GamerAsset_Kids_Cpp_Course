@@ -131,7 +131,7 @@ int main()
     cin >> n;
     bign sum = 0, factorial;
 
-    for (j = 1; j < n + 1; j += 1)
+    for (j = 1; j < n ; j += 1)
     {
         factorial = 1;
         for (i = 1; (i < j + 1); i += 1)
