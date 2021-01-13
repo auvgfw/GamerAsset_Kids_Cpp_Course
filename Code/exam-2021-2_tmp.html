@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>exam-2021-2.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt; </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iomanip&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cmath&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vector&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;set&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;bitset&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">int</span> n,i,j;
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; numbers;<span class="hljs-comment">//存储数字用的向量</span>
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; operators={<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>};<span class="hljs-comment">//存储运算符用的向量,1表示加号0表示减号</span>
+    <span class="hljs-keyword">int</span> sum_temp;<span class="hljs-comment">//存储算式的值</span>
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;sums;<span class="hljs-comment">//存储所有运算结果，由于有多少个结果是不确定的，因此必须使用vector而不是数组来存储，因为vector可以动态的扩充容量</span>
+    <span class="hljs-keyword">int</span> min;<span class="hljs-comment">//运算结果种的最小值</span>
+    <span class="hljs-keyword">int</span> counter[<span class="hljs-number">100000</span>]={<span class="hljs-number">0</span>};
+    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> expressioncounter=<span class="hljs-number">0</span>;<span class="hljs-comment">//辅助，统计一共有多少个式子</span>
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">7</span>; i++)<span class="hljs-comment">//读入所有等待计算的数字</span>
+    {
+        <span class="hljs-keyword">int</span> x;
+        <span class="hljs-built_in">cin</span>&gt;&gt;x;
+        numbers.push_back(x);
+    } 
+    sort(numbers.begin(),numbers.end());<span class="hljs-comment">//对所有数字进行排序，这样使用next_permutation时才能得到他们所有的字典排序</span>
+
+    <span class="hljs-keyword">do</span>
+    {
+
+        <span class="hljs-keyword">do</span>
+        {
+            expressioncounter++;<span class="hljs-comment">//统计到底有多少个式子，依题意，应有7！*c（6，3）个式子</span>
+            sum_temp=numbers[<span class="hljs-number">0</span>];<span class="hljs-comment">//暂存其中一个式子的运算结果，首先让其等于numbers里的第一个数</span>
+            <span class="hljs-comment">//cout&lt;&lt;numbers[0];</span>
+            <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">6</span>;i++)<span class="hljs-comment">//检查每一个运算符和数字</span>
+            {
+                <span class="hljs-keyword">if</span>(operators[i]==<span class="hljs-number">1</span>)<span class="hljs-comment">//运算符为1，做加法</span>
+                {
+                    sum_temp=sum_temp+numbers[i+<span class="hljs-number">1</span>];
+                    <span class="hljs-comment">//cout&lt;&lt;"+"&lt;&lt;numbers[i+1];</span>
+                }
+                <span class="hljs-keyword">else</span>
+                {
+                    sum_temp=sum_temp-numbers[i+<span class="hljs-number">1</span>];<span class="hljs-comment">//运算符为0，做减法</span>
+                    <span class="hljs-comment">//cout&lt;&lt;"-"&lt;&lt;numbers[i+1];</span>
+                }
+                
+            }
+            sums.push_back(sum_temp);<span class="hljs-comment">//将一个式子的运算结果加入到sums向量种的最后一个位置。</span>
+            <span class="hljs-comment">//cout&lt;&lt;"="&lt;&lt;sum_temp&lt;&lt;endl;</span>
+            <span class="hljs-comment">//将38，44，49，54行的注释取消掉打开，可以查看每一个被穷举出来的式子</span>
+
+        } <span class="hljs-keyword">while</span> (next_permutation(numbers.begin(),numbers.end()));<span class="hljs-comment">//对number做字典排序</span>
+        
+    } <span class="hljs-keyword">while</span> (next_permutation(operators.begin(),operators.end()));<span class="hljs-comment">//对operator做字典排序</span>
+    
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"total result:"</span>&lt;&lt;expressioncounter&lt;&lt;<span class="hljs-built_in">endl</span>;<span class="hljs-comment">//输出一共共有多少种结果（确认是否等于数学计算）</span>
+
+    min=*min_element(sums.begin(),sums.end());<span class="hljs-comment">//取出结果的最小值，请查阅文档，解释minelement的作用，返回值类型，解释为什么让min=*minelement。</span>
+    
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"min:******"</span>&lt;&lt;min&lt;&lt;<span class="hljs-built_in">endl</span>;
+    
+    <span class="hljs-keyword">if</span>(min&gt;<span class="hljs-number">0</span>)
+    {
+        min=<span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> it=sums.begin();it!=sums.end();it++)<span class="hljs-comment">//统计sums里的各个结果，各有多少个。其中*it为遍历时每一次的结果的数值。</span>
+    {
+        <span class="hljs-comment">//cout&lt;&lt;*it&lt;&lt;endl;</span>
+        counter[(*it)-min]++;
+        <span class="hljs-comment">//将counter[结果数字]+1，例如发现sums里有一个5，就把counter[5]+1，遍历全部sums后，即可得到每个结果出现了几次。由于结果中有可能负数，不能让counter[]中有负数，所以如果min是负数，则统一减去min。</span>
+    }
+
+    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">10000</span>;i++)
+    {
+       <span class="hljs-keyword">if</span>(counter[i]!=<span class="hljs-number">0</span>)
+       {
+           <span class="hljs-built_in">cout</span>&lt;&lt;i+min&lt;&lt;<span class="hljs-string">" "</span>&lt;&lt;counter[i]&lt;&lt;<span class="hljs-built_in">endl</span>;   <span class="hljs-comment">//输出每种结果有多少个，统一加上min</span>
+       }
+    }
+    system(<span class="hljs-string">"pause"</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</div></code></pre>
+
+</body>
+</html>

@@ -15,6 +15,8 @@ string op[1000];
 int sum[300][500000]; 
 int counter[1000];
 int main()
+
+//++++ ---- 1,0 0000-1111
 {
     int n, i, j = 1, k, w;
     cin >> n;
@@ -51,24 +53,24 @@ int main()
         {
             k = 1;
             sum[i][w] = b[w][k];
-            cout << b[w][k];
+            //cout << b[w][k];
             for (k = 2; k <= n; k++)
             {
                 if (op[i][k - 2] == '0')
                 {
                     sum[i][w] -= b[w][k];
-                    cout << "-" << b[w][k];
+                    //cout << "-" << b[w][k];
                 }
                 else
                 {
                     sum[i][w] += b[w][k];
-                    cout << "+" << b[w][k];
+                    //cout << "+" << b[w][k];
                 }
             }
-            cout << "=" << sum[i][w]<<" ";
+            //cout << "=" << sum[i][w]<<" ";
 
         }
-                    cout << endl<<endl;
+                    //cout << endl<<endl;
     }
 
     for (w = 1; w <= j; w++)
