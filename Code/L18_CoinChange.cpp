@@ -1,7 +1,8 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
+//凑出N元
+//给出a，b，c三种面值
 int main()
 {
     vector<int> coins;
@@ -28,7 +29,7 @@ int main()
         {
             if(i>=*iter && f[i-*iter]!=6666666)
             {
-                f[i]=min(f[i-*iter]+1,f[i]);
+                f[i]=min(f[i-*iter]+1,f[i]);//在三次循环里，*iter分别等于2 5 7
     
             }
         }
